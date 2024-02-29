@@ -1,0 +1,51 @@
+What is Exception?
+- It's an event that occurs during the execution of the program
+- It will disrupt your normal program flow
+- It creates the Exception object which contains information about the Error like 
+  1. Its type of exception and  Message
+  2. Stack trace etc.
+- Runtime System uses this Exception object and find the class which can handle it.
+
+
+What is the difference between Error and Exception?
+- Error is a situation which is not in our control. Eg. OutofMemoryError, StackOverflowError
+- Generally errors are related to the JVM issues.
+- Exceptions are respected to our code. We have certain control over that.
+
+
+Types of Exceptions:
+1. Compile Time Exception(checked) -->Code will not compiled if this exception is present. We have to manually handle those exceptions. 
+   - ClassNotFoundException
+   - InterruptedException
+   - IOException
+   - SQLException 
+2. Runtime Exception(unchecked) --> Code will properly get compiled but during the runtime issues will be arised.
+   - ClassCastException
+   - ArithmeticException
+   - IndexOutofBoundException
+   - NullPointerException
+   - IllegalArgumentException --> NumberFormatException
+
+
+How to handle the exception?
+1. Try/Catch:
+   - Try block specify the code which can throw exception
+   - Try block is followed by either catch or finally block
+   - Catch block is used to catch all the exceptions which can be throwed in the try block
+   - Multiple Catch block can be 
+2. Finally:
+   - Finally block can be use after try or catch block.
+   - Finally block will always get executed, either if you return from try block or from catch block
+   - At most we can add only 1 finally block.
+   - Mostly used for closing the objects, adding logs etc
+   - If JVM related issues like out of memory, system shut down or our process is forcefully killed then finally block will not be executed
+ 
+
+ Advantages to handle the exception
+ - It makes our code clean by seperating the error handling code from regular code
+ - It allows program to recover from the error.
+ - It allows us to add more information which supports debugging.
+ - Improves security by hiding the sensitive information.
+
+
+ **Exception Handling is expensive if the stack trace is huge!!!

@@ -1,0 +1,3 @@
+-> Generally it is used to group, logic related interfaces
+-> When you implements outer interface implementation of inner interface is not required and viceversa
+-> A nested interace declared within the class can have any access modifier

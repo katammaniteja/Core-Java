@@ -1,0 +1,27 @@
+Why Stop, Resume, Suspended method is deprecated?
+STOP: Terminates the thread abruptly, No lock release, No resource cleanup happens.
+SUSPEND: Put the thread on hold(suspend) for temporarily. No lock is release too..
+RESUME: Used to resume the execution of Suspended thread.
+These operation could result in deadlock.
+
+
+JOIN METHOD:
+- When JOIN method is invoked on a thread object current thread will be blocked and waits for specific thread to finish.
+- It is helpful when we want to coordinate between threads or to ensure that we complete certain task before moving ahead.
+
+
+THREAD PRIORITY:
+- Priorities are integers ranging from 1 to 10.
+  1-> low priority
+  2-> highest priority
+- Even we set the thread priority while creation, its not guranteed to follow any specific order, its just a hint to thread 
+  scheduler which to execute next.(but it's not strict rule)
+- When new thread created it inherits the priority of its parent thread
+- we can set custom priority using "setPriority(int)" method.
+
+
+DAEMON THREAD:
+- Daemon thread will only alive till one one of the any other thread is alive.
+Examples: Garbage Collector, Autosave
+- Logging is also an example. We should do logging only when the program is running. As soon as program finished working Logging
+  thread will also be removed.

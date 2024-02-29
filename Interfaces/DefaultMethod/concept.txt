@@ -1,0 +1,2 @@
+-> To add the functionality in existing legacy interface we need to use default method. Eg: stream()
+-> When we have the class implementing two interfaces and default methods in those two interfaces have same name then we have two implement the method in the class
